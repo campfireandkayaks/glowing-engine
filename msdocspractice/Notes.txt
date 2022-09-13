@@ -1,0 +1,152 @@
+Hello World is a string. Console.WriteLine is a method.
+C# is precise and case sensitive.
+Common mistakes new programmers make:
+
+Entering lower-case letters instead of capitalizing C in Console, or the letters W or L in WriteLine
+Entering a comma instead of a period between Console and WriteLine
+Forgetting double-quotation marks, or using single-quotation to surround the phrase Hello World!
+Forgetting a semi-colon at the end of the command
+Each of these mistakes prevents your code from compiling successfully.
+
+//Comment like this, or...
+
+/* Multiline 
+*Comments
+*like
+*/this.
+
+WriteLine has a new line feed built into it.
+Write does not, it just keeps writing on the same line.
+
+compiler is a special program that converts source code
+into a different format that the computer's CPU can execute.
+Compiled and then executed.
+
+Syntax includes keywords, special keyboard characters, and grammar rules
+the compiler enforces. Syntax highlighting helps you find errors.
+
+Literal string is characters within quotation marks.
+
+WriteLine()is called a method. Methods always have a set of parenthesis after them.
+The parenthesis are called the method invocation operator.
+
+The Console part is call a class. Classes "own" methods. Or,
+methods live inside of classes.
+
+The period separates the class from the method. It is called
+the member access operator. It is how you navigate from class to method.
+
+The semicolon is the end of statement operator.
+A statement is a complete instruction in C#.
+The semicolon tells the complier, end of command.
+So only executable code has a semicolon.?
+
+---------Storing and retrieving data with literal and variable values-------
+
+----String and char are for presentation----
+
+Literal string may be used in a message to a user.
+Variables are used to store data in memory as your app runs. Variables are unknowns and can be input from users.
+or a variable may be a file or the internet.
+
+Literal value is hard-coded and never changes.
+String data type is used whenever you have alphanumeric values or data for presentation and not calculation.
+Char literal is a data type for one character.
+Char literal syntax is 'x', single quotes.
+char (data type) is used for a single character.
+
+---int and decimal are for calculations----
+
+int literal is for whole integers +/-.
+requires no special operators.
+
+Decimal literal prints numbers with values after the decimal point.
+To create a decimal literal, append the letter m after the number.
+In this context m is a literal suffix.
+Literal suffix tells the compiler to work with a value of the type decimal.
+
+Without the literal suffix m, a decimal is treated as a double, which is less accurate than decimal.
+
+----Used for evaluating expressions----
+
+Bool literal represents true and false value.
+Bool is short for boolean, and is used in decision logic in applications.
+Bool is used to evaluate expressions for true or false state.
+
+Data types are central to C#, and are there to help developers avoid common software bugs.
+
+---DECLARING VARIABLES---
+Declare a variable to work with information from outside your code.
+
+Variable is a data item whose value may change. Its a friendly label
+that we can assign to a computer memory address, we can use to temporarily store 
+this information, and retrieve the value from the memory address.
+
+To declare a variable, you have to assign a data type.
+Rules to name variables:
+-Names can contain alphanumeric characters, and the underscore character.
+-No special characters
+-must not be a C# keyword
+-Case sensitive
+-use camel case, thisIsCamelCase.
+-be descriptive and meaningful for the app
+-use whole words appended together, no contractions
+-do not use the data type in the name.
+
+----Setting and Getting----
+
+To assign a value to a variable, you'll use the assignment operator or (=).
+Setting a value does not give you output.
+
+*Important: the C# compiler must first understand the
+value on the right side of the equals sign
+(assignment operator) then it can perform the
+assignment to the variable on the left side
+of the assignment operator. If you declare the
+variable value on the left side and put the 
+variable name on the right side, there will be
+a compiler error.
+
+Getting a value. Use a method to retrieve A
+value with the variable name.
+
+Reassign the value of variable. You do not 
+have to recreate the variable, but you do 
+have to reassign the value by setting and getting.
+
+INITIALIZE a variable
+If you do not set a variable, you will get an
+error CS0165, use of unassigned local variable ' '
+Its recommended to set the value asap after
+declaring a variable.
+
+To declare and set the value of a variable
+in one line of code is INITIALIZING THE VARIABLE.
+
+---Implicitly typed local variables---
+C# compiler can infer you variable's data
+type by it's initialized value.
+This is called implicitly typed local variables
+Created using the var keyword when declaring 
+a data type.
+Once var has set a data type, it will always
+use that data type. If you enter a different
+type of data into the variable you will get an
+error message CS0029, cannot implicitly converts
+type decimal to string. or whatever the case may be
+
+You can only use var if the variable is 
+initialized, that is declared and set in one line of code.
+you will get an error message, CS0818, implicitly
+typed variables have to be initialized.
+
+Var is an important tool in C#. In advanced coding,
+the data type may not be obvious at the time Its
+initialized. it is recommended to type the 
+actual data type for now, so you write with purpose.
+
+----BASIC STRING FORMATTING----
+
+
+
+

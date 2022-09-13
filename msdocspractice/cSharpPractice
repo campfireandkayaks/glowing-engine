@@ -1,0 +1,31 @@
+//Console.WriteLine("Hello World!");
+
+Console.Write("Congratulations!");
+Console.Write(" ");
+Console.Write("You wrote your first lines of code.");
+
+//Declaring a variable
+string firstName;
+//data type string, named it firstName. It can
+//only hold alphanumeric values.
+
+//Setting value doesn't give you output
+firstName = Bob;
+
+//Getting a value using the variable name
+Console.WriteLine(firstName);
+
+//Reassign a variable's value
+firstName = Billy;
+Console.WriteLine(firstName);
+firstName = Jaime;
+Console.WriteLine(firstName);
+firstName = Clayton;
+Console.WriteLine(firstName);
+firstName = Clyde;
+Console.WriteLine(firstName);
+
+//Initializing the variable
+string lastName = "Maples";
+Console.WriteLine(lastName);
+
