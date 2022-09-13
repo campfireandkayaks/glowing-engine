@@ -147,6 +147,49 @@ actual data type for now, so you write with purpose.
 
 ----BASIC STRING FORMATTING----
 
+C# provides many ways to combine and format data.
+Learn to use character escape sequences to format 
+literal strings of text to include special chars 
+and even different code languages. 
+Learn to concatenate two strings together, and use
+string interpolation to create a literal string template
+with replaceable parts.
+
+---Character Escape Sequences---
+is a special instruction to the runtime
+that you want to insert a special character
+that will affect the output of your string.
+
+In C# these begin with a backslash and include another 
+character. 
+\n will add a new line.
+\t will add a tab
+To insert a double quotation mark in a literal string 
+\"____\"
+\\ will insert a backslash
+
+---Verbatim String Literal---
+This will keep all whitespace and special chars
+without the need to escape the backslash
+To create a verbatim string:
+-use the @ directive before the literal string.
+-YOu still have to use quotation marks around the literal
+-You have to use double quotation marks to keep
+ the quotation marks printing around a literal:
+
+ Console.WriteLine(@"   c:\source\repos   
+      (""this is where your code goes"")");
+
+---Unicode Escape Characters---
+type \u and the 4 digit code representing some 
+character in the Unicode UTF-16. UTF-32 char require A
+different escape sequence not provided here
+Unicode chars may not print correctly depending on the application
+
+
+
+
+
 
 
 

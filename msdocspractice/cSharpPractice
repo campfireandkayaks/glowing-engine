@@ -29,3 +29,16 @@ Console.WriteLine(firstName);
 string lastName = "Maples";
 Console.WriteLine(lastName);
 
+//Character escape sequences
+Console.WriteLine("Hello\nWorld!");
+Console.WriteLine("Hello\tWorld!");
+Console.WriteLine("Hello\"World\"");
+Console.WriteLine("c:\\source\\repos");
+
+//@ verbatim dirctive keeps all whitespace and special chars. Double up on "" to keep.
+Console.WriteLine(@"   c:\source\repos   
+      (""this is where your code goes"")");
+
+
+// Unicode escape chars, \u + the 4 digit code for UTF-16
+Console.WriteLine("\u3053\u3093\u306B\u3061\u306F World!");
