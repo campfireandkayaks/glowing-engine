@@ -150,7 +150,7 @@ actual data type for now, so you write with purpose.
 C# provides many ways to combine and format data.
 Learn to use character escape sequences to format 
 literal strings of text to include special chars 
-and even different code languages. 
+and even different languages using unicode. 
 Learn to concatenate two strings together, and use
 string interpolation to create a literal string template
 with replaceable parts.
@@ -184,7 +184,157 @@ To create a verbatim string:
 type \u and the 4 digit code representing some 
 character in the Unicode UTF-16. UTF-32 char require A
 different escape sequence not provided here
-Unicode chars may not print correctly depending on the application
+Unicode chars may not print correctly depending on the application 
+
+----String Concantenation----
+
+This simply means to combine two or more values
+into a new value. The second value is appended to 
+the end of the first value, and so on in order.
+
++ sign is the string concatenation operator.
+
+Avoid creating intermediate variables if
+adding them does not increase readability.
+Also, aim for as few lines as possible. 
+
+---String Interpolation---
+Popular option when you have to concatenate
+many literals and variables together.
+It combines many values into a single literal string by 
+using a "template" and one or more
+interpolation expressions.
+An interpolation expression is a variable
+surrounded by curly braces.
+The literal string becomes a template
+when prefixed with the $ char.
+Can use verbatim literal with string interpolation
+string projectName = "First-Project";
+Console.WriteLine($@"C:\Output\{projectName}\Data");
+
+----PERFORMING BASIC FUNCTIONS ON NUMBERS----
+
+--Addition--
+Use the + addition operator 
+Using this symbol for addition as well as string 
+concatenation is called overloading the operator.
+Overloading happens often in C#
+
+the C# compiler parses your code and sees that the 
++ operator is surrounded by operands, or numeric
+values.
+Given the data type of the variables, C# compiler
+sees you are intending to add values.
+
+A parser is part of the compiler, and parsing is part of the compiling process
+Parsing is the process of analyzing text to determine if it
+belongs to a specific language, also called syntactic analysis.
+
+What happens if we try to + and int and a string?
+The compiler analyzes the string and int and + together
+and understands that we are trying to concatenate the two
+operands. It attempts to implicitly convert the int to a 
+string temporarily in order to concatenate it to the 
+rest of the string.
+
+If you try to add a number in the console.writeline method to 
+the int + string, it will treat everything as a string and 
+place the literal number beside the int, if in that order of course.
+
+In the same instance, if you place parenthesis around 
+the int + a number in the console.writeline method, the
+compiler will add the int to the number and give you an int.
+
+the parenthesis becomes another overloaded operator. In this case it 
+is the order of operations operator, like in math. After the
+compiler resolves the inner parenthesis resulting in the 
+addition of two ints, it implicitly converts the int result 
+to a string to concatenate it with the other strings. This is 
+probably something to avoid in a situation outside of learning.
+
++ addition operator
+- subtraction operator
+* multiplication operator
+/ division operator (values after the decimal, or remainders are 
+  truncated if the operand is defined as an int, and an int is a whole number.)
+% remainder operator tells you the remainder of the int division.
+
+---Decimal division---
+The quotient left of the assignment operator (=) has to be of
+the decimal data type and one or more of the operands (dividend or divisor) to
+the right of the assignment operator must be 
+a decimal data type, which is done by adding the
+suffix 'm'.
+
+Coding to perform literal decimal data division
+What if you are not working with literal values? what if you
+want to divide two ints, but do not want to truncate the
+result?
+---Casting---
+In this case you must perform a data type cast from
+int to decimal.
+Casting is a data conversion that instructs the compiler 
+to temporarily treat a value as if it were a different 
+data type.
+To cast int to decimal you add the cast operator before the
+value. You can use the name of the data type
+in parenthesis before the value.
+
+Sideline: parenthesis operator overload, use as method invocation,
+order of operations, and casting now.
+
+Using the remainder operator %
+//Console.WriteLine("Modulus of 200 / 5 : " + (200 % 5));
+//Console.WriteLine("Modulus of 7 / 5 : " + (7 % 5));
+Does not give the dividend, but does give the remainder.
+Shows what numbers can be evenly divided and 
+which do not.
+
+---Order of Operations---
+Parenthesis are the order of operations operators.
+Whatever is in the parenthesis will be done first.
+Also C# follows PEMDAS:
+1. Parenthesis
+2. Exponents ( except for exponents, there is no operator)
+3. multiplication and division L to R
+4. Addition and subtraction L to R
+
+For exponents you can use System.Math.Pow() method, but that will 
+have to be investigated later.
+
+---Increment and Decrement Values---
+Incrementing a variable is adding value to a variable.
+Decrementing a variable is taking value away from it.
+With no real idea of what the text is saying here, hoping for the best later on:
+Incrementing and decrementing a value is useful when you
+work with any looping logic, or code that interacts with 
+a data structure, which houses multiple elements of data.
+
+Compound assignment operators examples: +=, -=, *=, ++, -- 
+The += is specifically known as the addition assignment
+operator.
+These compound some operation in addition to assigning the result 
+to the variable.
+//int value = 0;
+//value = value + 5; This line means the same as the next, and 
+//value += 5;         if you console.writelined (value) the
+                      answer would be 10.
+//int value = 0;
+//value = value + 1;
+//value++;
+The last two lines mean the same thing. The output would be 2.
+You can do the same thing with subtraction and multiplication,
+but the guide is not specific if you can divide in this manner
+as well.
+
+The position you use the increment or decrement operator matters
+++value is different than value++. ++value the increment
+happens before the value is retrieved; value++, the increment
+happens after the value is retrieved.
+
+
+
+
 
 
 

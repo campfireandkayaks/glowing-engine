@@ -42,3 +42,35 @@ Console.WriteLine(@"   c:\source\repos
 
 // Unicode escape chars, \u + the 4 digit code for UTF-16
 Console.WriteLine("\u3053\u3093\u306B\u3061\u306F World!");
+
+//String interpolation, the literal becomes the template when prefixed with $
+string message = $"{greeting} {firstName}!";
+
+//What happens when we try to add an int and a string?
+string firstName = "Bob";
+int widgetsSold = 7;
+Console.WriteLine(firstName + " sold " + widgetsSold + " widgets.");
+
+string firstName = "Bob";
+int widgetsSold = 7;
+Console.WriteLine(firstName + " sold " + widgetsSold + 7 + " widgets.");
+
+//Casting and int to decimal
+int first = 7;
+int second = 5;
+decimal quotient = (decimal)first / (decimal)second;
+Console.WriteLine(quotient);
+
+//Using the remainder operator
+Console.WriteLine("Modulus of 200 / 5 : " + (200 % 5));
+Console.WriteLine("Modulus of 7 / 5 : " + (7 % 5));
+
+
+//Increment and decrement operator position makes a difference
+int value = 1;
+value++;
+Console.WriteLine("First: " + value);
+Console.WriteLine("Second: " + value++);
+Console.WriteLine("Third: " + value);
+Console.WriteLine("Fourth: " + (++value));//parenthesis used here to aid readability.
+
